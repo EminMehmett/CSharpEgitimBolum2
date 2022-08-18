@@ -16,5 +16,11 @@ namespace WindowsFormsAppAdoNet
         {
             InitializeComponent();
         }
+        ProductDAL ProductDAL = new ProductDAL(); // Veritabanı işlemlerinin olduğu sınıfı tanımladık
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dgvUrunler.DataSource = ProductDAL.GetAll(); // Form ön yüzdeki dgvUrunler nesnesine productDAL içindeki GetAll metodu ile ürünleri yüklettik 
+        }
     }
 }
