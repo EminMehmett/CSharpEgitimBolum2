@@ -20,7 +20,26 @@ namespace WindowsFormsAppAdoNet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgvUrunler.DataSource = ProductDAL.GetAll(); // Form ön yüzdeki dgvUrunler nesnesine productDAL içindeki GetAll metodu ile ürünleri yüklettik 
+            //dgvUrunler.DataSource = ProductDAL.GetAll(); // Form ön yüzdeki dgvUrunler nesnesine productDAL içindeki GetAll metodu ile ürünleri yüklettik
+
+            dgvUrunler.DataSource = ProductDAL.GetDataTable(); // Data table ile yaptığımız veri çekme metodu 
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            Product product = new Product(); // Boş bir product nesnesi oluşturduk 
+            product.StokMiktari = Convert.ToInt32(txtStokMiktari.Text);
+            product.UrunAdi = txtUrunAdi.Text;
+            product.UrunFiyati = Convert.ToDecimal(txtUrunFiyati.Text);
+            var islemSonucu = ProductDAL.Add(product); // Add metodunaproduct ı eklemesi için gönderdik 
+
+            if (islemSonucu > 0)
+            {
+                dgvUrunler.DataSource = ProductDAL.GetDataTable(); // Data grid view da eklenen son kaydıda  görebilmek için
+                MessageBox.Show("Kayıt Başarılı");
+            }
+            else MessageBox.Show("Kayıt Başarısız!");
+
         }
     }
 }
