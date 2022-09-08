@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsAppAdoNet
+﻿namespace WindowsFormsAppEntityFrameworkDbFirst
 {
     partial class Form1
     {
@@ -30,6 +30,7 @@
         {
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnEkle = new System.Windows.Forms.Button();
             this.txtStokMiktari = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,8 +50,8 @@
             this.dgvUrunler.Name = "dgvUrunler";
             this.dgvUrunler.RowHeadersWidth = 51;
             this.dgvUrunler.RowTemplate.Height = 24;
-            this.dgvUrunler.Size = new System.Drawing.Size(461, 426);
-            this.dgvUrunler.TabIndex = 0;
+            this.dgvUrunler.Size = new System.Drawing.Size(407, 426);
+            this.dgvUrunler.TabIndex = 1;
             this.dgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellClick);
             // 
             // groupBox1
@@ -65,12 +65,23 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtUrunAdi);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(489, 12);
+            this.groupBox1.Location = new System.Drawing.Point(449, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 251);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(329, 267);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
+            // 
+            // btnSil
+            // 
+            this.btnSil.Enabled = false;
+            this.btnSil.Location = new System.Drawing.Point(213, 213);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(94, 27);
+            this.btnSil.TabIndex = 8;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -141,25 +152,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı : ";
             // 
-            // btnSil
-            // 
-            this.btnSil.Enabled = false;
-            this.btnSil.Location = new System.Drawing.Point(213, 213);
-            this.btnSil.Name = "btnSil";
-            this.btnSil.Size = new System.Drawing.Size(94, 27);
-            this.btnSil.TabIndex = 8;
-            this.btnSil.Text = "Sil";
-            this.btnSil.UseVisualStyleBackColor = true;
-            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 447);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUrunler);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Yönetimi";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
@@ -173,15 +174,15 @@
 
         private System.Windows.Forms.DataGridView dgvUrunler;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUrunFiyati;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnEkle;
-        private System.Windows.Forms.Button btnGuncelle;
-        private System.Windows.Forms.Button btnSil;
     }
 }
 
