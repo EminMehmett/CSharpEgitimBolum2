@@ -39,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUrunAdi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtAra = new System.Windows.Forms.TextBox();
+            this.btnAra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +54,7 @@
             this.dgvUrunler.RowTemplate.Height = 24;
             this.dgvUrunler.Size = new System.Drawing.Size(423, 426);
             this.dgvUrunler.TabIndex = 2;
+            this.dgvUrunler.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellClick);
             // 
             // groupBox1
             // 
@@ -64,9 +67,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtUrunAdi);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(459, 22);
+            this.groupBox1.Location = new System.Drawing.Point(455, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 267);
+            this.groupBox1.Size = new System.Drawing.Size(365, 304);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ürün Bilgileri";
@@ -80,6 +83,7 @@
             this.btnSil.TabIndex = 8;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -90,6 +94,7 @@
             this.btnGuncelle.TabIndex = 7;
             this.btnGuncelle.Text = "Güncelle ";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // btnEkle
             // 
@@ -103,7 +108,7 @@
             // 
             // txtStokMiktari
             // 
-            this.txtStokMiktari.Location = new System.Drawing.Point(178, 148);
+            this.txtStokMiktari.Location = new System.Drawing.Point(178, 151);
             this.txtStokMiktari.Name = "txtStokMiktari";
             this.txtStokMiktari.Size = new System.Drawing.Size(100, 22);
             this.txtStokMiktari.TabIndex = 5;
@@ -149,21 +154,41 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ürün Adı : ";
             // 
+            // txtAra
+            // 
+            this.txtAra.Location = new System.Drawing.Point(455, 37);
+            this.txtAra.Name = "txtAra";
+            this.txtAra.Size = new System.Drawing.Size(234, 22);
+            this.txtAra.TabIndex = 4;
+            // 
+            // btnAra
+            // 
+            this.btnAra.Location = new System.Drawing.Point(733, 37);
+            this.btnAra.Name = "btnAra";
+            this.btnAra.Size = new System.Drawing.Size(75, 23);
+            this.btnAra.TabIndex = 5;
+            this.btnAra.Text = "Ara";
+            this.btnAra.UseVisualStyleBackColor = true;
+            this.btnAra.Click += new System.EventHandler(this.btnAra_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(824, 514);
+            this.Controls.Add(this.btnAra);
+            this.Controls.Add(this.txtAra);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvUrunler);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Ürün Yönetimi";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -180,6 +205,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUrunAdi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAra;
+        private System.Windows.Forms.Button btnAra;
     }
 }
 
