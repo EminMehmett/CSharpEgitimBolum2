@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bootstrapde Margin ve Padding kullanımı</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <h1>Bootstrapde Margin ve Padding kullanımı</h1>
+
+        <hr />
+        <h2>Margin Kullanarak Hizalama</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                Kolon 1 - col-md-4
+            </div>
+            <div class="col-md-4 ms-auto">
+                Kolon 2 - col-md-4 ms-auto  // ms-auto  ile divi sağa hizalar
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-3">
+                Kolon 1 - col-md-3
+            </div>
+            <div class="col-md-3 me-auto">
+                Kolon 2 - col-md-3 me-auto  // me-auto ile divi sola hizalar
+            </div>
+        </div>
+
+
+        <h2>Bootstrap İç-Dış Boşluk Kullanımı</h2>
+
+        <div class="row">
+            <div class="col p-5">Kolon 1 p-5</div>
+            <div class="col p-3">Kolon 2 p-3</div>
+            <div class="col p-1">Kolon 3 p-1</div>
+        </div>
+
+        <p>
+            Bs ta elementlere p-0 ile p-5 classlarıyla padding verilebilir. <hr />
+            p-sm, md,lg .. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz.
+        </p>
+
+        <div class="row">
+            <div class="col m-5">Kolon 1 m-5</div>
+            <div class="col m-3">Kolon 2 m-3</div>
+            <div class="col m-1">Kolon 3 m-1</div>
+        </div>
+
+        <p class="mt-3 ms-1 me-4 mb-5 pt-2 pe-3 pb-4 ps-3;">
+            Bs ta elementlere m-0 ile m-5 classlarıyla margin verebiliriz
+            <hr />
+            m-sm, md, lg.. kullanarak farklı ekran genişlikleri için farklı boşluklar da kullanabiliriz
+            <hr />
+            ms-5 =baştan yani sola margin, me-2 =margin right, pt-3 = padding-top, pb-4 = padding-bottom kodlarıyla tek yönden margin veya padding uygulayabiliriz.
+        </p>
+
+        <hr />
+
+        <h2>Bootstrap Metin Hizalama</h2>
+
+        <p>
+            Bootstrap ta element içerisindeki metinleri sağa, sola veya merkeze class kullanarak hizalayabiliriz.
+        </p>
+
+        <div class="text-center">
+            Yazıyı ortalamak için class="text-center" classı kullanılır.
+        </div>
+
+        <div class="text-end">
+            Yazıyı sağa hizalamak için class="text-end" classı kullanılır.
+        </div>
+
+        <hr />
+
+        <h2>Bootstrap Responsive Images</h2>
+
+        <p>
+            Bootstrap te resimleri de mobil uyumlu hale getirmek için class kullanabilmekteyiz.
+        </p>
+
+        <h3>Kullanımı</h3>
+
+        <div class="row mb-5">
+            <div class="col-5">
+                <img src="../Images/Porsche ımage.jpg" class="img-fluid" />
+            </div>
+            Resme class="img-fluid" classı vererek resmi responsive hale getirdik
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-5">
+                <img src="../Images/Porsche ımage.jpg" class="img-thumbnail" />
+            </div>
+            Resme class="img-thumbnail" classı vererek resmi responsive hale getirdik
+        </div>
+
+
+    </div>
+
+
+
+    <br /><br /><br /><br /><br />
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Css 02-Arkaplanlar</title>
+</head>
+<body>
+    <h2>CSS Arkaplanlar</h2>
+
+    <h3>Css arkapalan özellikleri Html öğeler için arkaplan efektlerini tanımlamada kullanılır </h3>
+
+    <p>
+        arka plan rengi <br />
+        arka plan resmi <br />
+        arka plan tekrarı <br />
+        arka plan eki <br />
+        arka plan konumu
+    </p>
+
+    <div style="background-color: green; opacity: 0.5;">
+        Css de arka plan rengine opacity ile saydamlık, şeffaflık ekleyebiliriz
+        <br />
+        Gerekli kod : background-color: green; opacity: 0.5;
+    </div>
+    <hr />
+    <div style="background: rgba(0, 128, 0, 0.3)">
+        Opaklık için bir diğer yöntem de style da renk kodu olarak rgba kullanmaktır
+        <br />
+        Örnek : background: rgba(0, 128, 0, 0.5)
+        <br />
+        Sondaki değer alfa dır opaklığı bu değer ayarlar
+    </div>
+
+    <hr />
+
+    <div style="background-image: url('/Images/logo.png'); height: 200px;">
+        <h3>Css arka plan resmi</h3>
+
+        <p>CSs ile html elemanlarına arka plan resmi ekleyebiliriz</p>
+
+        <p>
+            Bunun için yazmamız gereken kod şudur : background-image: url(arkaplan.gif)'
+        </p>
+
+    </div>
+
+    <hr />
+
+    <div style="background-image: url('/Images/logo.png'); background-repeat: no-repeat; height: 200px; ">
+        <h3>Css arka plan tekrarı</h3>
+
+        <p>CSs ile html elemanlarına arka plan tekrarı ekleyebiliriz</p>
+
+        <p>
+            background-repeat özelliği ile resim tekrarını yatayda, dikeyde veya tekrar etmeyecek şekilde ayarlayabiliriz
+        </p>
+        <ol>
+            <li>background-repeat:repeat-x; : arka plan resmini yatayda tekrar et</li>
+            <li>background-repeat:repeat-y; : arka plan resmini dikeyde tekrar et</li>
+            <li>background-repeat:no-repeat; : arka plan resmini tekrar etme</li>
+        </ol>
+    </div>
+
+    <hr />
+
+    <div style="background-image: url('/Images/logo.png'); background-repeat: no-repeat; background-position: center ; height: 200px; ">
+        <h3>Css arka plan konumu</h3>
+
+        <p>CSs ile html elemanlarına arka plan konumu ekleyebiliriz</p>
+
+        <p>
+            Bunun için yazmamız gereken kod şudur : background-image: url(arkaplan.gif)' Bütün uzantılar(png, jpg vb) olabilir
+        </p>
+
+        <p>
+            Arka plan resminin pozisyonunu ayarlamak için gerekli kod : background-position:right top; veya  bacckground-position: 18px 58px; pixellerle de ayarlayabiliriz
+        </p>
+
+
+    </div>
+
+    <hr />
+
+    <div style="background-image: url('/Images/logo.png'); background-attachment: fixed; background-repeat: no-repeat; background-position: bottom; height: 500px; ">
+
+        <h3>Css arka plan sabitleme</h3>
+
+        <p>
+            Arka plan resminin kaydırılması mı yoksa sabit mi olması gerektiğini belirler
+        </p>
+
+        <p>
+            Eğer sayfa aşağı kaydırıldığında arka planresminin sabit kalmasını istersek şu kodu eklemeliyiz : backgroud-attachment: fixed;
+        </p>
+    </div>
+
+    <hr />
+
+    <div style="background: #fff url('/Images/logo.png') no-repeat fixed right bottom; height: 500px;">
+
+        "background: #fff url('/Images/logo.png') no-repeat fixed center bottom; height: 500px;" : kodu ile tek satırda tüm arka plan işlemlerini halledebiliriz
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>jquery ve javascript ile Css işlemleri</title>
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>jquery ve javascript ile Css işlemleri</h1>
+
+    <h3 id="jqilegizle">Bu element Jquery ile gizlenecek</h3>
+    <h3 id="jsilegizle">Bu element Javascript ile gizlenecek</h3>
+
+    <script>
+        $("#jqilegizle").hide() // elementi jquery ile gizle
+        document.getElementById("jsilegizle").style.display = "none"; // elementi Javascript ile gizle
+
+        //Elementleri Göster
+        $("#jqilegizle").show(); // jquery ile elementi görünür yapma
+        document.getElementById("jsilegizle").style.display = "block" // elementi javascriptile göster
+    </script>
+
+    <hr />
+
+    <h2>Elementlerin Csslerini Değiştirme</h2>
+    <div id="jqsekillendir" class="jqsekil text">Elementlerin css lerini değiştirme</div>
+    <div id="jssekillendir" class="jssekil text">Elementlerin css lerini değiştirme</div>
+    <style>
+        .jsclass {
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        // Jquery ile css işlemleri
+        $("jqsekillendir").css("font-size", "34px")
+        $("jqsekillendir").css("padding", "1rem").css("margin", "18px")
+
+        // Jquery ile class ekleme-silme
+        $("h2:first").addClass("baslik") // h2:first seçicisi sayfadaki h2 elementlerinden ilkini seç demektir
+        $("#jqsekillendir").addClass("jsclass deneme")
+        // var olan classı kaldırma
+        $("#jqsekillendir").removelass("sekil")
+
+        //Javascript ile Css İşlemleri
+        document.getElementById("jssekillendir").style.color = "blue";
+        document.getElementById("jssekillendir").style.padding = "18px";
+        document.getElementById("jssekillendir").style.margin = "1rem";
+
+        //Javascript ile class ekleme-silme
+
+        document.getElementById("jssekillendir").classList.add("jsclass")
+        document.getElementById("jssekillendir").classList.remove("jsclass")
+    </script>
+
+
+
+    <br /><br /><br /><br /><br />
+</body>
+</html>

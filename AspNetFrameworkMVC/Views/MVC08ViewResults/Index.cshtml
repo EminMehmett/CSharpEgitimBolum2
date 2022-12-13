@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "MVC08 View Result Kullanımı";
+}
+
+<h2>MVC08 View Result Kullanımı</h2>
+
+<h3>
+    Redirect Result : Sayfayı bir url adresine yönlendirmek için kullanılır.
+</h3>
+
+@Html.ActionLink("Redirect Result", "Yonlendir")
+
+
+<h3>
+    RedirectToAction Result : Sayfayı bir Action adresine yönlendirmek için kullanılır.
+</h3>
+
+@Html.ActionLink("RedirectToAction Result", "ActionaYonlendir")
+
+
+<h3>
+    RedirectToRoute Result : Sayfayı bir Route adresine yönlendirmek için kullanılır.
+</h3>
+
+@Html.ActionLink("RedirectToRoute Result", "RouteYonlendir")
+
+
+<h3>
+    PartialViewResult : Actiona gelen istek sonucu geriye bir PartialView döndürmek için kullanılır.
+</h3>
+
+@Html.Partial("_KategorilerPartial")
+
+<h3>
+    Kategorileri Action ile Getir : controller daki bir actionı  çalıştırmak için kullanılır
+</h3>
+
+@Html.Action("KategorileriGetirPartial")
+
+
+<h3>
+    Kategorileri Action ile Getir : controller daki bir actionı model kullanarak çalıştırmak için kullanılır
+</h3>
+
+@Html.Action("KategorileriModelleGetirPartial")
+
+
+<h3>
+    JavascriptResult : conrtroller daki bir actiona gelen istek sonucu ile geriye javascript kodu döndürebiliriz.
+</h3>
+
+@*<script src="/MVC08ViewResults/JsResult"></script>*@
+
+<h3>
+    JasonResult : ccontroller daki bir actiona gelen istek sonucu geriye bir json türünde veri döndürebiliriz.
+</h3>
+
+@Html.ActionLink("Json Result", "JsonResult")
+
+<h3>
+    ContentResult : controller daki bir actiona gelen istek sonucu geriye xml türünde veri döndürebiliriz
+</h3>
+
+@Html.ActionLink("Xml Content Result", "XmlContentResult")

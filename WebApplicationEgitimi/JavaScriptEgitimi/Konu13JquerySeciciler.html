@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Jquery Seçiciler</title>
+    <script src="jquery-3.6.1.min.js"></script>
+    <style>
+        .brd {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jquery Seçciler</h1>
+    <p>Jquery kütüphanesi ile javascript işemlerini daha az kod ilr </p>
+
+    <h2 id="baslik">Html Elementlerini Id ye Göre Seçme</h2>
+
+    <p id="mesaj" class="brd"></p>
+
+    <script>
+        // Jquery de kodlar ve seçmeişlemleri $ karakteriyle yapılır
+        $(document).ready(function () {
+            // $(document).ready metodu döküman hazır olduğunda kodların çalıştırılmasını sağlar
+            var secilecekEleman = $("#baslik"); // sayfadaki id değeri baslik olan elementi seç
+            $("mesaj").text("Başlıktan gelen içerik : " + secilecekEleman[0].innerText);
+            // # karakteri bir elementi id değerine göre seçmemizi sağlar
+            // . karakteri bir elementi class değerine göre seçmemizi sağlar
+        });
+    </script>
+
+    <hr />
+
+    <h2>Html Elementlerini Etiket Adına Göre Seçmek</h2>
+    <p id="Etiket" class="brd"></p>
+
+    <script>
+        $(document).ready(function () {
+            var secilecekEleman = $("h2");
+            $("#Etiket").text("Başlıktan Gelen İçerik : " + secilecekEleman[1].innerText);
+
+        });
+    </script>
+
+    <hr />
+
+    <h2 class="sinifSecici">Html Elementlerini Sınıf(class) Adına Göre Seçme</h2>
+
+    <p id="sinif" class="brd"></p>
+
+    <script>
+        $(function () { // $(function kodu $(document).ready(function yerine kullanılabilir
+            var secilecekEleman = $(".brd");
+            $("#sinif").text("Başlıktan Gelen İçerik : " + secilecekEleman[1].innerText); // [0, 1, 2, 3, 4, 5]
+        })
+    </script>
+
+    <hr />
+
+    <h2 class="sinifSecici">Html Elementlerini Css Seçicilerine Göre Seçmek</h2>
+
+    <p id="cssSecici" class="brd"></p>
+
+    <script>
+        $(function () {
+            var secilecekEleman = $("p.brd");
+            $("#cssSecici").text("Başlıktan Gelen İçerik : " + secilecekEleman[1].innerText);
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+</html>

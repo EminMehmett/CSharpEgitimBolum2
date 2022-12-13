@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Giriş</title>
+</head>
+<body>
+    <h1>Javascript Giriş</h1>
+
+    <h2>Javascript Front-End Kütüphaneleri</h2>
+
+    <p>
+        Angular(Google), React(Facebook), VueJs; SPA(Single Page Application) web uygulaması geliştirme için kullanılır.
+    </p>
+
+    <p>
+        Jquery: JAvascript kodlarını daha pratik hale getirmek için.
+    </p>
+
+    <p>
+        Javascript Kodlarını
+        <script></script> Tagları arasına yazıyoruz.
+    </p>
+
+    <h3>Javascript ile ekrana yazı yazdırma</h3>
+
+    <script>
+        document.writeln("Bu yazı Js document.writeln metoduyla yazıldı.");
+        document.writeln("<h3>Bu yazı Js document.writeln metoduyla yazıldı.</h3>");
+        console.log("console.log ile Js uygulamalarımızda verileri kullanıcının görmediği konsol ekranına yazdırabiliriz"); // console a yazılan yazıları görmek içi tarayıcıda sağ tık incele deyip console menüsüne tıklamalıyız
+        //Javascript ile değişken tanımlama
+        var urunAdi; var urunFiyati = 1490.90, kdv = 18;
+        //Typescript ile değişken tanımlama
+        urunAdi = "Monitör";
+        console.log = ("Ürün Adı : ", urunAdi);
+        console.log = ("Ürün Fiyatı : ", urunFiyati);
+        console.log = ("Ürün Kdv : ", kdv);
+        console.log = ("Meslek : ", meslek);
+
+        // Let ile değişken tanımlama
+        let isim; let soyisim; var meslek; // Burada meslek değişkenini var yerine let ile tanımlarsak uygulama hata veriyor ve sonraki kodları işletmiyor
+        isim = "Ali";
+        soyisim = "Deniz";
+        meslek = "Yazılım Uzmanı";
+        console.log('Kullanıcı Bilgileri : ' + isim + ' ' + soyisim + ' Meslek : ' + meslek);
+
+        //Javascript Sabitler
+        //Değerinin değişmesini istemediğimiz verileri sabit ile tanımlarız
+        const sabitDeğer = "Bu yazı sabittir sonradan değiştirilemez";
+
+        //sabitDeğer = "Yeni Değer";
+        console.log(sabitDeğer);
+
+        /*
+         Çoklu yorum satırı da yine C# daki gibi
+         */
+    </script>
+
+</body>
+</html>

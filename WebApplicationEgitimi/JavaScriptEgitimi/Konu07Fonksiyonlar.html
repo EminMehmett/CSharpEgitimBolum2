@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>js Fonksiyonlar</title>
+</head>
+<body>
+    <h1>js Fonksiyonlar</h1>
+
+    <script>
+        // Fonksiyon Tanımlama
+        function fonksiyonAdi(parametre) {
+            console.log('Fonksiyona gönderilen değer :  ', parametre)
+        }
+        // Fonksiyon  Çağırma
+        fonksiyonAdi("Javascript ile fonksiyon çağırma")
+
+        // Örnek 2 -- void metot : geriye değer döndürmeyen
+        function ToplamaYap(sayi1, sayi2) {
+            console.log('Sayıların toplamı : ', sayi1 + sayi2)
+        }
+        ToplamaYap(10, 8)
+
+        // Örnek 3 -- geriye değer döndüren metot
+        function cikarmaYap(sayi1, sayi2) {
+            return sayi1 - sayi2;
+        }
+        console.log("36-18 = ", cikarmaYap(36, 18))
+
+        // Örnek 4 -- Sayfada arka plan ve yazı rengi değiştirme
+        function RenkDegistir(arkaplanRengi, yaziRengi) {
+            document.bgColor = arkaplanRengi; // document.bgColor javascript kodu document sayfa oluyor, bgColor ise sayfanın arkaplan rengini değiştiren js de var olan property
+            document.fgColor = yaziRengi; // fgColor ise sayfadaki yazı rengini değiştiren js özelliği
+        }
+        RenkDegistir("red", "white")
+
+        var icGenislik = window.innerWidth; // window nesnesi de javascript de hazır gelen bir diğer nesnedir ve içerisinde sayfanın çalıştığı pencereyle alakalı yapabileceğimiz hazır işlemleri barındırır.
+        var icYukseklik = window.innerHeight; // innerHeight özelliği bize tarayıcı pencere yüksekliğini verir
+
+        // Dış Ölçüler
+        var disGenislik = window.outerWidth;
+        var disYukseklik = window.outerHeight;
+
+        document.write("<h3>Pencere iç genişliği : " + icGenislik + " </h3>");
+        document.write("<h3>Pencere iç yüksekliği : " + icYukseklik + " </h3>"); // ekrana bir şeyler yazdırırken html elementlerini de kullanabiliriz
+
+        document.write("<h3>Pencere dış genişliği : " + disGenislik + " </h3>");
+        document.write("<h3>Pencere dış yüksekliği : " + disYukseklik + " </h3>");
+
+        if (icGenislik < 768) {
+            RenkDegistir("white", "red")
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data; // Veritabanı İşlemleri için gerekli 
 using System.Data.SqlClient; // Adonet Kütüphaneleri 
 
@@ -50,14 +49,14 @@ namespace WindowsFormsAppAdoNet
             ConnectionKontrol();
             SqlCommand command = new SqlCommand("select * from Kategoriler where Id = " + id, connection);
             SqlDataReader reader = command.ExecuteReader();
-            Kategori kategori  = new Kategori();
+            Kategori kategori = new Kategori();
 
             while (reader.Read())
             {
 
                 kategori.Id = Convert.ToInt32(reader["ID"]);
-                kategori.KategoriAdi  = reader["KategoriAdi"].ToString();
-                kategori.Durum  = Convert.ToBoolean(reader["Durum"]);
+                kategori.KategoriAdi = reader["KategoriAdi"].ToString();
+                kategori.Durum = Convert.ToBoolean(reader["Durum"]);
             }
             reader.Close(); // veri okuyucuyu kapat 
             command.Dispose(); // sql kommut nesnesini kapat 
